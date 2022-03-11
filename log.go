@@ -1,7 +1,6 @@
 package log
 
 import (
-	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"time"
@@ -158,7 +157,6 @@ func (l *Logger) Debugf(msg string, args ...interface{}) {
 
 // Info logs a message at level Info on the standard logger.
 func (l *Logger) Info(msg string, fields ...Field) {
-	fmt.Println(l)
 	l.zapLogger.Info(msg, fields...)
 }
 
