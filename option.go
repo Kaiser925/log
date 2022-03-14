@@ -13,6 +13,7 @@ type Option struct {
 	EnableCaller     bool
 	OutputPaths      []string
 	ErrorOutputPaths []string
+	CallerSkip       int
 }
 
 // DefaultOption returns Option with the default value.
@@ -24,5 +25,6 @@ func DefaultOption() *Option {
 		EnableCaller:     true,
 		OutputPaths:      []string{"stdout"},
 		ErrorOutputPaths: []string{"stderr"},
+		CallerSkip:       1,
 	}
 }

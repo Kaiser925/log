@@ -129,7 +129,7 @@ func NewLogger(opt *Option) *Logger {
 	}
 
 	var err error
-	zl, err := loggerConfig.Build(zap.AddStacktrace(zapcore.PanicLevel), zap.AddCallerSkip(1))
+	zl, err := loggerConfig.Build(zap.AddStacktrace(zapcore.PanicLevel), zap.AddCallerSkip(opt.CallerSkip))
 	if err != nil {
 		panic(err)
 	}
